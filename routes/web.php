@@ -16,4 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $greeting = "HELLO WORD";
     return view('home', compact("greeting"));
-});
+})->name("home");
+
+Route::get('/lista_spesa', function () {
+    $shopping_list = ["uova", "pane", "cocacola", "vino", "telefono a riccardo", "fileinfo ad andera", "compare una pizza ad Andy"];
+    return view('list', compact("shopping_list"));
+})->name("shopping_list");

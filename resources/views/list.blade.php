@@ -18,16 +18,25 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="{{route('shopping_list')}}">Lista Della Spesa</a>
+                        <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
+                        <a class="nav-link" href="#">Lista Della Spesa</a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <h1 class="mt-5">{{$greeting}}</h1>
-    </div>
+    <main>
+        <div class="container mt-5">
+            <div class="card text-center text">
+                <ul class="list-group list-group-flush">
+                    @foreach($shopping_list as $item)
+                    <li class="list-group-item text-uppercase">{{$item}}</li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    </main>
+
 </body>
 
 </html>
