@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1>HELLO WORD</h1>
+    <h1>{{$greeting}}</h1>
 </body>
 
 </html>
